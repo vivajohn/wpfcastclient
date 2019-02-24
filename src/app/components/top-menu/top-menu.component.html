@@ -1,0 +1,14 @@
+<div class="topmenu">
+  <list-menu *ngIf="!config.isStandAlone"></list-menu>
+  <button *ngIf="!config.isStandAlone" mat-fab (click)="onSave()">
+    <mat-icon aria-label="Save playlist" matTooltip="Save playlist">save</mat-icon>
+  </button>
+  <!-- <button *ngIf="!config.isStandAlone" mat-fab (click)="onCreate()">
+    <mat-icon aria-label="Save playlist with new name" matTooltip="Create new playlist">create</mat-icon>
+  </button> -->
+  <button *ngIf="!config.isStandAlone" mat-fab (click)="signaler.send('Clear')">
+      <mat-icon aria-label="Clear the list" matTooltip="Clear the list">clear</mat-icon>
+    </button>
+  <upload-button (upload)="upload.emit($event)"></upload-button>
+  <help-button></help-button>
+</div>

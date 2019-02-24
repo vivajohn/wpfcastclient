@@ -1,0 +1,11 @@
+@import '../../common/common.scss';
+
+.topmenu {
+  @extend .row;
+
+  button, list-menu, upload-button {
+    margin-right: 15px;
+  }
+
+}
+

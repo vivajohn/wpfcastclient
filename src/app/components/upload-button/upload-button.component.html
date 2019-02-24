@@ -1,0 +1,9 @@
+<button *ngIf="config.isStandAlone" mat-fab (click)="fileInput.click()" matTooltip="Select audio files">
+  <mat-icon aria-label="Open upload the file dialog">playlist_add</mat-icon>
+</button>
+
+<button *ngIf="!config.isStandAlone" mat-fab (click)="signaler.send('openWpfFileDialog')">
+  <mat-icon aria-label="Open the upload file dialog">playlist_add</mat-icon>
+</button>
+
+<input type="file" style="display:none;" #fileInput (change)="onUpload(fileInput.files)" multiple/>

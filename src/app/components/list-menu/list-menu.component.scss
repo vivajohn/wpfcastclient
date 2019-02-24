@@ -1,0 +1,14 @@
+@import '../../common/common.scss';
+
+// .mat-menu-item .mat-icon {
+//   margin: 0 0 0 15px;
+// }
+
+.list-icon {
+  padding: 12px;
+}
+
+.hoverx:hover {
+  color: black;
+  background: $mat-gold-selected;
+}

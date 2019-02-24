@@ -1,0 +1,13 @@
+<div class="dlg-string">
+  <form>
+    <mat-form-field color="accent">
+      <input name="inputName" matInput placeholder="Playlist name" [(ngModel)]="name" (keydown.enter)="dialogRef.close(name)">
+    </mat-form-field>
+  </form >
+  <button  mat-mini-fab [mat-dialog-close]="name">
+    <mat-icon aria-label="Ok">check</mat-icon>
+  </button>
+  <button  mat-mini-fab  [mat-dialog-close]=null>
+    <mat-icon aria-label="Cancel">close</mat-icon>
+  </button>
+</div>

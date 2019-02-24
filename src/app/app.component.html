@@ -1,0 +1,19 @@
+<div #dropTarget fileDrop 
+    (filesDropped)="dropped($event)" (filesHovered)="onDrag($event)"
+    [ngClass]="{'dropborder': isFileHover}"
+    class="playbox">
+
+  <div *ngIf="!showPlayer" class="drophere">
+    <div>
+      <list-menu *ngIf="!config.isStandAlone"></list-menu>
+    </div>
+    <div>
+      <h3>Drop audio files here or click this button:</h3>
+      <upload-button (upload)="onUpload($event)"></upload-button>
+    </div>
+  </div>
+
+  <player *ngIf="showPlayer"></player>
+
+  <span *ngIf="!showPlayer" class="version">v2.0</span>
+</div>

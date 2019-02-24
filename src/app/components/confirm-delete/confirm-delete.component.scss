@@ -1,0 +1,32 @@
+@import '../../common/common.scss';
+
+.cfmdel {
+  display: block;
+  width: 250px;
+  height: 100%;
+
+  .mat-dialog-actions {
+    margin-bottom: -12px; // Material css is -24px
+  }
+
+  .big-question {
+    @extend .row;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    mat-icon {
+      font-size: 44px;
+      width: 100%;
+      // padding-top: 15px;
+    }
+
+    .qmark {
+      font-size: 52px;
+      margin-top: -10px;
+    }
+  }
+
+  .bottom-icon {
+    padding: 0 10px;
+  }
+}

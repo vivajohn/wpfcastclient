@@ -1,0 +1,82 @@
+$mat-gold: #ffd740;
+$mat-gold-selected: #F5CF3D;
+$fore-color: lighten(lightgray, 8%);
+$back-color: darken(darkgray, 30%);
+
+$header-backcolor:  darken(darkgray, 50%);
+$light-backcolor: lighten(lightgrey, 12%);
+$dark-backcolor: #434343;
+$indent: 20px;
+$navbar-height: 50px;
+
+.pointer {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.indent {
+  margin-left: $indent;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rowfull {
+  @extend .row;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.colfull {
+  @extend .col;
+  justify-content: space-between;
+}
+
+.colcenter {
+  @extend .col;
+  align-items: center;
+}
+
+.w100 {
+  width: 100%;
+}
+
+
+// If the device supports hovering then hide/show the delete item button on mouseover
+@media (hover: hover) {
+  .hovershow {
+    &-icon {
+      opacity: 0;
+    }
+
+    &:hover &-icon {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.dbug1 {
+  border: solid 1px red;
+  box-sizing: border-box;
+}
+
+.dbug2 {
+  border: solid 1px greenyellow;
+  box-sizing: border-box;
+}

@@ -1,0 +1,22 @@
+<div class="cfmdel">
+  <div class="colcenter">
+    <mat-dialog-content>
+      <div class="big-question">
+        <div><mat-icon>delete</mat-icon></div>
+        <div class="qmark">?</div>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <div class="bottom-icon">
+        <button mat-button mat-fab  [mat-dialog-close]="false">
+          <mat-icon aria-label="Submit">close</mat-icon>
+        </button>
+      </div>
+      <div class="bottom-icon">
+        <button mat-button mat-fab [mat-dialog-close]="true">
+          <mat-icon aria-label="Submit">check</mat-icon>
+        </button>
+      </div>
+    </mat-dialog-actions>
+  </div>
+</div>

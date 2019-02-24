@@ -1,0 +1,11 @@
+@import '../../common/common.scss';
+
+
+.dlg-string {
+  @extend .row;
+  background: $mat-gold;
+
+  button {
+    margin-left: 15px;
+  }
+}

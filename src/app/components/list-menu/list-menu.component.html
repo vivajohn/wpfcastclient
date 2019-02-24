@@ -1,0 +1,13 @@
+<button mat-fab [matMenuTriggerFor]="listmenu">
+  <mat-icon aria-label="Open a playlist" matTooltip="Open a playlist">library_music</mat-icon>
+</button>
+<mat-menu #listmenu="matMenu" class="listmenu">
+  <div *ngFor="let hdr of list" class="rowfull hovershow">
+    <button class="hoverx" mat-menu-item (click)="onSelect(hdr)">
+      {{ hdr.name }}
+    </button>
+    <mat-icon class="hovershow-icon hoverx list-icon" aria-label="Delete list" (click)="onDelete($event, hdr)">
+      clear
+    </mat-icon>
+  </div>
+</mat-menu>

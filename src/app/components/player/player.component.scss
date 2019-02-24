@@ -1,0 +1,110 @@
+@import '../../common/common.scss';
+
+.player {
+  @extend .col;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.fader {
+  position: absolute;
+  top: 10%;
+  align-self: center;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.row1 {
+  display: block;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  .row1b {
+    @extend .rowfull;
+    padding-bottom: 20px;
+  }
+
+  h1, h2 {
+    color: $mat-gold;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.row2 {
+  @extend .col;
+  justify-content: flex-start;
+}
+
+.audio-controls {
+  width: fit-content;
+}
+
+.upload-table {
+  overflow: auto;
+  height: 100%;
+}
+
+.txt-show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+.txt-hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 3s, opacity 2s linear;
+}
+
+.slider {
+  @extend .row;
+  margin: 10px 15px 20px 0;
+
+  mat-slider {
+    width: 100%;
+    margin: 0 15px 0 15px;
+  }
+}
+
+.buttons {
+  @extend .rowfull;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+
+  button, list-menu {
+    margin-right: 15px;
+  }
+
+  &-group {
+    display: inline-block;
+  }
+}
+
+.grayed {
+  opacity: 0.5;
+}
+
+.selected {
+  background: $mat-gold;
+  color: $back-color;
+}
+
+td {
+  padding: 0 10px;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}

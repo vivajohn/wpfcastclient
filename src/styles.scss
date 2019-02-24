@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/common/common.scss';
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  height: 100vh;
+  width: 100%;
+  color: $fore-color;
+  background: $back-color;
+}
+
+.help-dialog {
+  .mat-dialog-container {
+    background: $fore-color;
+    color: $back-color;
+  }
+}
+
+.confirm-dialog {
+  mat-dialog-container {
+    background: $mat-gold;
+    color: $back-color;
+  }
+}
+
+.string-dialog {
+  mat-dialog-container {
+    background: $mat-gold;
+  }
+  .mat-form-field-label {
+    color: $back-color;
+  }
+  .mat-form-field.mat-focused .mat-form-field-label {
+      color: $back-color;
+  }
+  .mat-accent .mat-input-element {
+    caret-color: $back-color;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: $back-color;
+  }
+}
+
+.listmenu {
+  color: $back-color;
+  background: $mat-gold;
+}
