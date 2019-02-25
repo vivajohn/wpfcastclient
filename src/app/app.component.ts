@@ -8,7 +8,7 @@ import { FileTypes } from './classes/file-types';
 import { FileListService } from './services/file-list.service';
 import { PlaylistService } from './services/playlist.service';
 import { ConfigService } from './services/config.service';
-import { LibInfo } from './classes/lib-info';
+import { LibInfo, LibHeader } from './classes/lib-info';
 
 @Component({
   selector: 'root',
@@ -56,9 +56,10 @@ export class AppComponent {
   
   // Set up to receive calls on the SignalR pipeline
   private setupSignalr() {
-    this.signaler.register('AddItems').subscribe((items: PlayItem[]) => {
-      this.listMgr.addItems(items);
-    });
+    this.signaler.register('LibrarySaved').subscribe((libHeader: LibHeader) => this.listMgr.onLibrarySaved(libHeader));
+
+    this.signaler.register('AddItems').subscribe((items: PlayItem[]) => this.listMgr.addItems(items));
+
     this.signaler.register('Library').subscribe((libinfo: LibInfo) => this.listMgr.setItems(libinfo));
   }
 

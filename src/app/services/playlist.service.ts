@@ -71,6 +71,10 @@ export class PlaylistService {
     this.newList.next(this.playItems);
   }
 
+  onLibrarySaved(libHeader: LibHeader) {
+    this.library = libHeader;
+  }
+
   canNext(): boolean {
     return this.isLoop ? true : this.currentIndex < (this.playItems.length - 1);
   }

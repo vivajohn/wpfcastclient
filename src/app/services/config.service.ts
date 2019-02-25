@@ -9,8 +9,8 @@ export class ConfigService {
 
   isStandAlone = false;
 
-  urlRest = 'http://localhost:31468/api';
+  urlRest = 'http://localhost:31469/api';
 
-  signalrHost = 'localhost:31468/playerHub';
+  signalrHost = 'localhost:31469/playerHub';
   
 }
