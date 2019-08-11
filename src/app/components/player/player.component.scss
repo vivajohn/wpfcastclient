@@ -37,7 +37,7 @@
 
 .row2 {
   @extend .col;
-  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .audio-controls {

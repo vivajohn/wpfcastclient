@@ -56,11 +56,12 @@ export class PlaylistService {
       this.mergeNewItems(items);
     }
 
-    this.originalItems.sort((itemA, itemB) => {
-      const a = itemA.name.toUpperCase();
-      const b = itemB.name.toUpperCase();
-      return (a < b) ? -1 : (a > b) ? 1 : 0;
-    });
+    // 11-aug-2019, removed to preserve user's order
+    // this.originalItems.sort((itemA, itemB) => {
+    //   const a = itemA.name.toUpperCase();
+    //   const b = itemB.name.toUpperCase();
+    //   return (a < b) ? -1 : (a > b) ? 1 : 0;
+    // });
 
     this.setPlaylist();
 
