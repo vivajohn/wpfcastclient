@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { PlayItem } from '../classes/play-item';
 import { Observable, Subject, of, merge, ReplaySubject } from 'rxjs';
 import { FileTypes } from '../classes/file-types';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 // Converts an html file list to a list of PlayItem objects
 

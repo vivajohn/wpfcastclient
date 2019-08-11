@@ -2,7 +2,7 @@ import { Component, ViewChild, ElementRef} from '@angular/core';
 import { PlayItem } from './classes/play-item';
 import { Observable, Subject, of, interval, merge } from 'rxjs';
 import { map, mapTo, last, filter, catchError, onErrorResumeNext } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { SignalrService } from './services/signalr.service';
 import { FileTypes } from './classes/file-types';
 import { FileListService } from './services/file-list.service';
@@ -17,7 +17,7 @@ import { LibInfo, LibHeader } from './classes/lib-info';
 })
 export class AppComponent {
 
-  @ViewChild('dropTarget') dropTarget: ElementRef;
+  @ViewChild('dropTarget', { static: true }) dropTarget: ElementRef;
   
   isFileHover = false;
 

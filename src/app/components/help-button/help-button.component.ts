@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HelpComponent } from '../help/help.component';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'help-button',

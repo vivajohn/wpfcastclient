@@ -5,7 +5,7 @@ import { SignalrService } from 'src/app/services/signalr.service';
 import { PlaylistService } from 'src/app/services/playlist.service';
 import { LibInfo, LibHeader } from 'src/app/classes/lib-info';
 import { DlgStringComponent } from '../dlg-string/dlg-string.component';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { FileTypes } from 'src/app/classes/file-types';
 
 @Component({

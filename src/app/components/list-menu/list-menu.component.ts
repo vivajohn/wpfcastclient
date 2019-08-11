@@ -3,7 +3,7 @@ import { SignalrService } from 'src/app/services/signalr.service';
 import { LibHeader, LibInfo } from 'src/app/classes/lib-info';
 import { PlaylistService } from 'src/app/services/playlist.service';
 import { ConfirmDeleteComponent } from '../confirm-delete/confirm-delete.component';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'list-menu',

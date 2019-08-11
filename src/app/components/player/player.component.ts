@@ -3,7 +3,7 @@ import { AudioPlusComponent } from '../audio-plus/audio-plus.component';
 import { PlayItem } from 'src/app/classes/play-item';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 import { FileTypes } from 'src/app/classes/file-types';
 import { SignalrService } from 'src/app/services/signalr.service';
@@ -35,7 +35,7 @@ export class PlayerComponent implements AfterViewInit {
 
   readonly PAUSE_TIME = 500;
 
-  @ViewChild('audioPlayer', { read: AudioPlusComponent }) player: AudioPlusComponent;
+  @ViewChild('audioPlayer', { read: AudioPlusComponent, static: true }) player: AudioPlusComponent;
 
   wait = false;
   fadeState: string;
